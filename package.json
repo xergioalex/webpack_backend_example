@@ -1,0 +1,41 @@
+{
+  "name": "webpack-backend-example",
+  "version": "1.0.0",
+  "description": "Webpack backend example",
+  "main": "dist/index.js",
+  "scripts": {
+    "build:clean": "rm -Rf node_modules && rm -Rf dist",
+    "build:dev": "yarn && webpack --mode development --progress",
+    "build:dev:watch": "yarn && webpack --mode development --progress --watch",
+    "build:prod": "yarn && webpack -p --mode production --progress",
+    "build:prod:watch": "yarn && webpack -p --mode production --progress --watch",
+    "docker:build:dev": "export PERMISSIONS=$(id -u):$(id -g) && export COMMAND_SCRIPT=build:dev && docker-compose up",
+    "docker:build:dev:watch": "export PERMISSIONS=$(id -u):$(id -g) && export COMMAND_SCRIPT=build:dev:server && docker-compose up",
+    "docker:build:prod": "export PERMISSIONS=$(id -u):$(id -g) && export COMMAND_SCRIPT=build:prod && docker-compose up",
+    "docker:build:prod:watch": "export PERMISSIONS=$(id -u):$(id -g) && export COMMAND_SCRIPT=build:prod && docker-compose up"
+  },
+  "author": "xergioalex",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.3"
+  },
+  "devDependencies": {
+    "babel-loader": "7.1.5",
+    "babel-plugin-transform-flow-strip-types": "6.22.0",
+    "babel-plugin-transform-runtime": "6.23.0",
+    "babel-preset-env": "1.7.0",
+    "babel-preset-es2015": "6.24.1",
+    "babel-preset-stage-2": "6.24.1",
+    "babel-register": "6.26.0",
+    "babel-runtime": "6.26.0",
+    "clean-webpack-plugin": "0.1.19",
+    "install": "0.12.1",
+    "source-map-loader": "0.2.3",
+    "source-map-support": "0.5.8",
+    "uglifyjs-webpack-plugin": "1.2.7",
+    "webpack": "4.16.5",
+    "webpack-cli": "3.1.0",
+    "webpack-dev-server": "3.1.5",
+    "webpack-node-externals": "1.7.2"
+  }
+}
