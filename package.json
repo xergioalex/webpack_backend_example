@@ -4,6 +4,7 @@
   "description": "Webpack backend example",
   "main": "dist/index.js",
   "scripts": {
+    "start": "node dist/index.js",
     "build:clean": "rm -Rf node_modules && rm -Rf dist",
     "build:dev": "yarn && webpack --mode development --progress",
     "build:dev:watch": "yarn && webpack --mode development --progress --watch",

@@ -20262,11 +20262,16 @@ module.exports = function (module) {
 "use strict";
 
 
-// Require express and create an instance of it
-var express = __webpack_require__(/*! express */ "./node_modules/express/index.js");
-var app = express();
+var _express = __webpack_require__(/*! express */ "./node_modules/express/index.js");
+
+var _express2 = _interopRequireDefault(_express);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var app = (0, _express2.default)();
 
 // on the request to root (localhost:3000/)
+// Require express and create an instance of it
 app.get('/', function (req, res) {
     res.send('<b>My</b> first express http server');
 });
