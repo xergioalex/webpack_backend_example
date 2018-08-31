@@ -13,7 +13,7 @@
     "docker:build:dev": "export PERMISSIONS=$(id -u):$(id -g) && export COMMAND_SCRIPT=build:dev && docker-compose up",
     "docker:build:dev:watch": "export PERMISSIONS=$(id -u):$(id -g) && export COMMAND_SCRIPT=build:dev:server && docker-compose up",
     "docker:build:prod": "export PERMISSIONS=$(id -u):$(id -g) && export COMMAND_SCRIPT=build:prod && docker-compose up",
-    "docker:build:prod:watch": "export PERMISSIONS=$(id -u):$(id -g) && export COMMAND_SCRIPT=build:prod && docker-compose up"
+    "docker:build:prod:watch": "export PERMISSIONS=$(id -u):$(id -g) && export COMMAND_SCRIPT=build:prod:watch && docker-compose up"
   },
   "author": "xergioalex",
   "license": "ISC",
